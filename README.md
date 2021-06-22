@@ -1,0 +1,2 @@
+# lba
+Laravel Bash Aliases
