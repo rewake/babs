@@ -1,0 +1,12 @@
+{
+    "name": "rewake/lba",
+    "description": "Laravel Bash Aliases",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Richard Komatz",
+            "email": "r.komatz@gmail.com"
+        }
+    ],
+    "require": {}
+}
