@@ -2,3 +2,12 @@ alias art="php artisan"
 alias p="php artisan"
 alias pa"php artisan"
 alias artisan="php artisan"
+
+alias migrate="php artisan migrate"
+alias pam="php artisan migrate"
+
+alias mm="php artisan make:migration"
+
+alias tink="php artisan tinker"
+alias tinker="php artisan tinker"
+alias pat="php artisan tinker"
