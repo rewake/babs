@@ -1,0 +1,50 @@
+{
+   "php artisan": [
+      "pa",
+      "art"
+   ],
+   "php artisan serve": [
+      "pas"
+   ],
+   "php artisan migrate": [
+      "pam"
+   ],
+   "php artisan migrate:fresh": [
+      "pamf"
+   ],
+   "php artisan make:migration": [
+      "mig",
+      "migration"
+   ],
+   "php artisan make:model": [
+      "mod",
+      "model"
+   ],
+   "php artisan make:controller": [
+      "cont",
+      "contract"
+   ],
+   "php artisan make:policy": [
+      "pol",
+      "policy"
+   ],
+   "php artisan make:middleware": [
+      "mw",
+      "middleware"
+   ],
+   "php artisan route:list": [
+      "rl",
+      "parl",
+      "routes",
+      "routelist"
+   ],
+   "php artisan route:pretty": [
+      "pretty",
+      "pr"
+   ],
+   "php artisan tinker": [
+      "pat",
+      "tink",
+      "tinker"
+   ]
+}

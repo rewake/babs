@@ -8,5 +8,7 @@
             "email": "r.komatz@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+       "ext-json": "*"
+    }
 }

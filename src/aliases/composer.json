@@ -1,0 +1,15 @@
+{
+   "composer install": "ci",
+   "composer require": [
+      "cr"
+   ],
+   "composer remove": [
+      "crm"
+   ],
+   "composer update": [
+      "cup"
+   ],
+   "composer upgrade": [
+      "cug"
+   ]
+}
