@@ -10,5 +10,8 @@
     ],
     "require": {
        "ext-json": "*"
+    },
+    "scripts": {
+        "lba": "php -r \"copy('vendor/rewake/lba/bin/install.sh', 'lba/index.html'); copy('vendor/rewake/lba/bin/aliases', 'lba/aliases');\""
     }
 }
