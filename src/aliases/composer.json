@@ -1,4 +1,5 @@
 {
+   "composer": "c",
    "composer install": "ci",
    "composer require": [
       "cr"

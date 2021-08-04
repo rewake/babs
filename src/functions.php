@@ -24,18 +24,18 @@ function parseAliases()
     }
 }
 
-function traverse($iterator, $name)
+function traverse($iterator, $alias)
 {
     while ($iterator->valid()) {
         $iterator->hasChildren()
             ? traverse($iterator->getChildren(), $iterator->key())
-            : storeAlias($name, $iterator->current());
+            : storeAlias($alias, $iterator->current());
         $iterator->next();
     }
 }
 
-function storeAlias($name, $alias)
+function storeAlias($command, $alias)
 {
     global $aliases;
-    $aliases[] = "alias {$name}='{$alias}'";
+    $aliases[] = "alias {$alias}='{$command}'";
 }

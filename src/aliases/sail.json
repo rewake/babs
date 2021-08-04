@@ -1,0 +1,6 @@
+{
+  "vendor/bin/sail": "sail",
+  "vendor/bin/sail artisan": "sa",
+  "vendor/bin/sail up -d": "sud",
+  "vendor/bin/sail down": "sd"
+}
