@@ -16,23 +16,14 @@ class BuildAliasesCommand extends Command
     {
         $builder = new AliasBuilder();
 
-        // TODO: check env
-        $builder->parse(getenv('ALIAS_DIR') ?: __DIR__ . '/aliases');
+        $builder->parse(__DIR__ . '/aliases');
 
-        // TODO: output file location/name
+        // TODO: output file location/name command arg
         $stub = file_get_contents(__DIR__ . '/stubs/install.stub');
         $file = str_replace('{{ $aliases_placeholder }}', $builder->aliases(), $stub);
 
+        @mkdir('bin');
         file_put_contents('bin/install.sh', $file);
-
-
-//        $filename = dirname(__DIR__) . '/bin/aliases';
-//        $file = fopen($filename, 'w+');
-//
-//        fwrite($file, implode(PHP_EOL, $aliases));
-//
-//        fclose($file);
-
 
         return Command::SUCCESS;
     }
