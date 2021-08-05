@@ -1,11 +1,6 @@
 {
-   "php artisan": [
-      "pa",
-      "art"
-   ],
-   "php artisan serve": [
-      "pas"
-   ],
+   "php artisan": "pa",
+   "php artisan serve": "pas",
    "php artisan migrate": [
       "pam"
    ],

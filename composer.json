@@ -9,9 +9,13 @@
         }
     ],
     "require": {
-       "ext-json": "*"
+       "ext-json": "*",
+       "symfony/console": "^5.3",
+        "vlucas/phpdotenv": "^5.3"
     },
-    "scripts": {
-        "lba": "php -r \"copy('vendor/rewake/lba/bin/install.sh', 'lba/index.html'); copy('vendor/rewake/lba/bin/aliases', 'lba/aliases');\""
+    "autoload": {
+        "psr-4": {
+            "Rewake\\": "src"
+        }
     }
 }
