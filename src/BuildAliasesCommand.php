@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Rewake;
+namespace Rewake\AliasBuilder;
 
 
 use Symfony\Component\Console\Command\Command;
@@ -12,13 +12,19 @@ class BuildAliasesCommand extends Command
 {
     protected static $defaultName = "make";
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $builder = new AliasBuilder();
 
-        $aliases = $builder->parseAliases();
+        // TODO: check env
+        $builder->parse(getenv('ALIAS_DIR') ?: __DIR__ . '/aliases');
 
-        var_dump($aliases);
+        // TODO: output file location/name
+        $stub = file_get_contents(__DIR__ . '/stubs/install.stub');
+        $file = str_replace('{{ $aliases_placeholder }}', $builder->aliases(), $stub);
+
+        file_put_contents('bin/install.sh', $file);
+
 
 //        $filename = dirname(__DIR__) . '/bin/aliases';
 //        $file = fopen($filename, 'w+');

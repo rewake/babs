@@ -9,13 +9,14 @@
         }
     ],
     "require": {
+       "php": ">=7.3",
        "ext-json": "*",
        "symfony/console": "^5.3",
-        "vlucas/phpdotenv": "^5.3"
+       "vlucas/phpdotenv": "^5.3"
     },
     "autoload": {
         "psr-4": {
-            "Rewake\\": "src"
+            "Rewake\\AliasBuilder\\": "src"
         }
     }
 }

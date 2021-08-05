@@ -10,7 +10,9 @@ curdir=$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd -P)
 while alias= read -r line || [ -n "$line" ];
 do
 echo $line >> $file
-done < $curdir/aliases
+done <<- EOL
+{{ $aliases_placeholder }}
+EOL
 
 # Source the aliases
 source $file

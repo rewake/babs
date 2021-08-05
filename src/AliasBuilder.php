@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Rewake;
+namespace Rewake\AliasBuilder;
 
 
 use RecursiveArrayIterator;
@@ -15,29 +15,36 @@ class AliasBuilder
     /**
      * @var array
      */
-    protected array $aliases;
+    protected $aliases;
 
     /**
      * Parses alias config files in aliases directory and generates
      * proper aliases, which are stored in $this->aliases array.
      *
-     * @return array
+     * @param string $aliasDir
+     * @return void
      */
-    public function parseAliases(): array
+    public function parse(string $aliasDir): void
     {
-        // TODO: aliases dir from config/env
-        $files = array_diff(scandir(__DIR__ . '/aliases'), ['.', '..']);
+        // TODO: array filter for non json files
+        $files = array_diff(scandir($aliasDir), ['.', '..']);
 
         foreach ($files as $file) {
 
-            if ($data = json_decode(file_get_contents(__DIR__ . "/aliases/{$file}"), true)) {
+            if ($data = json_decode(file_get_contents("{$aliasDir}/{$file}"), true)) {
 
                 $iterator = new RecursiveArrayIterator($data);
                 iterator_apply($iterator, [__CLASS__, 'traverse'], [$iterator]);
             }
         }
+    }
 
-        return $this->aliases;
+    /**
+     * @return string
+     */
+    public function aliases(): string
+    {
+        return implode(PHP_EOL, $this->aliases);
     }
 
     /**

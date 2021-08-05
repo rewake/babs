@@ -3,16 +3,21 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Dotenv\Dotenv;
-use Rewake\BuildAliasesCommand;
+use Rewake\AliasBuilder\BuildAliasesCommand;
 use Symfony\Component\Console\Application;
 
 // Load .env
 (Dotenv::createImmutable(__DIR__))->safeLoad();
 
+// Create application
 $app = new Application('BABS Alias Builder Script', '1.0.0');
 
+// Instantiate build command
 $command = new BuildAliasesCommand();
 
+// Add command to app and set as default
 $app->add($command);
 $app->setDefaultCommand($command->getName(), true);
+
+// Run the app
 $app->run();
