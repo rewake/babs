@@ -18,5 +18,8 @@
         "psr-4": {
             "Rewake\\AliasBuilder\\": "src"
         }
-    }
+    },
+    "bin": [
+        "babs"
+    ]
 }
