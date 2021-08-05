@@ -1,6 +1,6 @@
 {
-    "name": "rewake/lba",
-    "description": "Laravel Bash Aliases",
+    "name": "rewake/babs",
+    "description": "BABS Alias Builder Script",
     "type": "library",
     "authors": [
         {
