@@ -15,4 +15,4 @@ done <<- EOL
 EOL
 
 # Source the aliases
-source $file
+. $file

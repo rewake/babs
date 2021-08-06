@@ -1,5 +1,9 @@
 {
-   "php artisan": "pa",
+   "php artisan": [
+      "pa",
+      "art",
+      "artisan"
+   ],
    "php artisan serve": "pas",
    "php artisan migrate": [
       "pam"
@@ -17,7 +21,7 @@
    ],
    "php artisan make:controller": [
       "cont",
-      "contract"
+      "controller"
    ],
    "php artisan make:policy": [
       "pol",
